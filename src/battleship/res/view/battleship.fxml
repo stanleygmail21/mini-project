@@ -1,0 +1,31 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="battleship.Controller"
+          xmlns:fx="http://javafx.com/fxml"
+          id="battleship"
+          stylesheets="@../css/style.css" alignment="CENTER">
+    <AnchorPane>
+        <children>
+            <Label id="label" fx:id="label"></Label>
+            <TilePane
+                    fx:id="tiles"
+                    id="tiles"
+                    prefTileWidth="56.4"
+                    prefTileHeight="57"
+                    prefColumns="7"
+                    AnchorPane.topAnchor="84"
+                    AnchorPane.leftAnchor="47">
+            </TilePane>
+            <HBox id="wrapper" AnchorPane.topAnchor="520" AnchorPane.leftAnchor="330">
+                <TextField id="text" fx:id="textField" maxWidth="100" promptText="A0"/>
+                <Button id="button" onAction="#buttonClick">Fire!</Button>
+            </HBox>
+        </children>
+    </AnchorPane>
+</GridPane>
